@@ -26,11 +26,17 @@ public class PlayerController : Singleton<PlayerController>
 
     public bool invincible = false;
 
-    
+    [Header("Coin Setup")]
+    public GameObject coinCollector;
+
+    [Header("Animation")]
+    public AnimatorManager animatorManager;
+
+    private float _baseSpeedToAnimation = 7;
     
     public DG.Tweening.Ease ease = DG.Tweening.Ease.OutBack;
 
-    [Header("TextMeshPro")]
+    [Header("Text")]
     public TextMeshPro uiTextPowerUp;
 
     public static PlayerController Instance { get; private set; }
@@ -52,12 +58,16 @@ public class PlayerController : Singleton<PlayerController>
     private void Start(){
         _startPosition = transform.position;
         ResetSpeed();
+        animatorManager.Play(AnimatorManager.AnimationType.RUN);
 
     }
 
     private void OnCollisionEnter(Collision collision){
         if(collision.transform.tag == tagToCheckEnemy){
-            if(!invincible) EndGame();
+            if(!invincible){ 
+            MoveBack();
+            EndGame(AnimatorManager.AnimationType.DEAD);
+            }
         }
     }
 
@@ -67,13 +77,19 @@ public class PlayerController : Singleton<PlayerController>
         }
      }
 
-    private void EndGame(){
+    private void MoveBack(){
+        transform.DOMoveZ(-1f, .3f).SetRelative();
+    }
+
+    private void EndGame(AnimatorManager.AnimationType animationType = AnimatorManager.AnimationType.IDLE){
         _canRun = false;
         EndScreen.SetActive(true);
+        animatorManager.Play(animationType);
     }
 
     public void Awake(){
         _canRun = true;
+        animatorManager.Play(AnimatorManager.AnimationType.RUN, _currentSpeed / _baseSpeedToAnimation);
         EndScreen.SetActive(false);
         if (Instance == null)
         {
