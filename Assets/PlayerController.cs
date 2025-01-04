@@ -20,6 +20,7 @@ public class PlayerController : Singleton<PlayerController>
     private bool _canRun;
 
     public GameObject EndScreen;
+    public GameObject NextLevelScreen;
 
     private float _currentSpeed;
     private Vector3 _startPosition;
@@ -62,6 +63,12 @@ public class PlayerController : Singleton<PlayerController>
 
     }
 
+    private void LevelFinshed(AnimatorManager.AnimationType animationType = AnimatorManager.AnimationType.IDLE){
+        _canRun = false;
+        NextLevelScreen.SetActive(true);
+        animatorManager.Play(animationType);
+    }
+
     private void OnCollisionEnter(Collision collision){
         if(collision.transform.tag == tagToCheckEnemy){
             if(!invincible){ 
@@ -73,7 +80,7 @@ public class PlayerController : Singleton<PlayerController>
 
      private void OnTriggerEnter(Collider other){
         if(other.transform.tag == tagToCheckEndLine){
-            if(!invincible) EndGame();
+            if(!invincible) LevelFinshed();
         }
      }
 
