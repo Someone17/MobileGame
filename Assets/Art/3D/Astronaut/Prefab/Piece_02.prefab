@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3429297841374540277}
   - component: {fileID: 6987153014248669719}
   - component: {fileID: 618241619131026564}
+  - component: {fileID: 6840975322000278097}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -123,6 +124,21 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   graphicItem: {fileID: 1564562913858503757}
   particleSystem: {fileID: 0}
+--- !u!114 &6840975322000278097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564562913858503757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9849e94a0bddf40a6eb438c8118755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  startColor: {r: 1, g: 1, b: 1, a: 1}
+  meshRenderer: {fileID: 3429297841374540277}
 --- !u!1 &1641086396286270488
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +231,7 @@ GameObject:
   - component: {fileID: 3334278416621950180}
   - component: {fileID: 7466053394135068542}
   - component: {fileID: 5523475651276511571}
+  - component: {fileID: 7148371942947307183}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -310,6 +327,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7148371942947307183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563985123314047978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9849e94a0bddf40a6eb438c8118755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  startColor: {r: 1, g: 1, b: 1, a: 1}
+  meshRenderer: {fileID: 7466053394135068542}
 --- !u!1 &5175374733712304689
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +354,7 @@ GameObject:
   - component: {fileID: 6182280564455326273}
   - component: {fileID: 6694292538042375069}
   - component: {fileID: 8875436408232774669}
+  - component: {fileID: 8248813400570510747}
   m_Layer: 0
   m_Name: Cylinder (3)
   m_TagString: Enemy
@@ -417,6 +450,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &8248813400570510747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5175374733712304689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9849e94a0bddf40a6eb438c8118755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  startColor: {r: 1, g: 1, b: 1, a: 1}
+  meshRenderer: {fileID: 6694292538042375069}
 --- !u!1 &7878699142198578222
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +478,7 @@ GameObject:
   - component: {fileID: 6592606539692430446}
   - component: {fileID: 2640253239327060173}
   - component: {fileID: 2974547854604172641}
+  - component: {fileID: 1355689516370774681}
   m_Layer: 0
   m_Name: Capsule (1)
   m_TagString: Untagged
@@ -544,3 +593,18 @@ MonoBehaviour:
   particleSystem: {fileID: 0}
   duration: 3
   amountToSpeed: 6
+--- !u!114 &1355689516370774681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7878699142198578222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9849e94a0bddf40a6eb438c8118755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  startColor: {r: 1, g: 1, b: 1, a: 1}
+  meshRenderer: {fileID: 6592606539692430446}
