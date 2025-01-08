@@ -33,6 +33,8 @@ public class PlayerController : Singleton<PlayerController>
     [Header("Animation")]
     public AnimatorManager animatorManager;
 
+    [SerializeField]private BounceHelper _bounceHelper;
+
     private float _baseSpeedToAnimation = 7;
     
     public DG.Tweening.Ease ease = DG.Tweening.Ease.OutBack;
@@ -61,6 +63,11 @@ public class PlayerController : Singleton<PlayerController>
         ResetSpeed();
         animatorManager.Play(AnimatorManager.AnimationType.RUN);
 
+    }
+
+    public void Bounce(){
+        if(_bounceHelper != null)
+        _bounceHelper.Bounce();
     }
 
     private void LevelFinshed(AnimatorManager.AnimationType animationType = AnimatorManager.AnimationType.IDLE){

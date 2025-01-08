@@ -12,16 +12,25 @@ public class ItemCollectable : MonoBehaviour
 
     public ParticleSystem particleSystem;
 
+    private void Start(){
+        CoinsAnimationManager.Instance.RegisterCoin(this);
+    }
+
     private void OnCollisionEnter(Collision collision){
         if(collision.transform.CompareTag(compareTag)){
             Collect();
         }
     }
 
-   protected virtual void Collect()
-    {
+    protected virtual void HideItens(){
         if(graphicItem != null) graphicItem.SetActive(false);
         Invoke("HideObject", timeToHide);
+        
+    }
+
+   protected virtual void Collect()
+    {
+        HideItens();
         OnCollect();
     }
 
