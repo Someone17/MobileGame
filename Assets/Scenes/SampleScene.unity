@@ -422,9 +422,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad1cb8086d218d4cae83c05692c1ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleDuration: 0.1
-  scaleBounce: 0.1
-  ease: 27
+  scaleDuration: 0.05
+  scaleBounce: 1.2
+  ease: 1
 --- !u!4 &248867120 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 846124737713832569, guid: d57e116414706a2469c69a9a558f58cb, type: 3}
@@ -5838,8 +5838,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a1ead67a2dcc1af498892df52e728e61, type: 2}
   _index: 2
   _spawnedPieces: []
-  scaleDuration: 0.2
-  scaleTimeBetweenPieces: 0.1
+  scaleDuration: 1.9
+  scaleTimeBetweenPieces: 1.51
   ease: 27
 --- !u!1 &705507993
 GameObject:
