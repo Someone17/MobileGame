@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4751911318218764661}
   - component: {fileID: 3429297841374540277}
   - component: {fileID: 6987153014248669719}
-  - component: {fileID: 618241619131026564}
   - component: {fileID: 6840975322000278097}
+  - component: {fileID: 3578308631678788718}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -108,23 +108,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &618241619131026564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564562913858503757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ef8deb55c39ea145a26a1b26700a3e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  compareTag: Player
-  timeToHide: 3
-  audioSource: {fileID: 0}
-  graphicItem: {fileID: 1564562913858503757}
-  particleSystem: {fileID: 278161089896524918}
 --- !u!114 &6840975322000278097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +123,27 @@ MonoBehaviour:
   duration: 1
   startColor: {r: 1, g: 1, b: 1, a: 1}
   meshRenderer: {fileID: 3429297841374540277}
+--- !u!114 &3578308631678788718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564562913858503757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82550988e5ac375459cc5c41674fdc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  compareTag: Player
+  timeToHide: 3
+  audioSource: {fileID: 0}
+  graphicItem: {fileID: 1564562913858503757}
+  particleSystem: {fileID: 278161089896524918}
+  collider: {fileID: 6987153014248669719}
+  collect: 0
+  lerp: 5
+  minDistance: 1
 --- !u!1 &1641086396286270488
 GameObject:
   m_ObjectHideFlags: 0

@@ -1784,7 +1784,7 @@ GameObject:
   - component: {fileID: 1895045465542212571}
   - component: {fileID: 4675213812467109436}
   - component: {fileID: 6000726158786736245}
-  - component: {fileID: 4421941521940178459}
+  - component: {fileID: 2899309573434795279}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -1878,7 +1878,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4421941521940178459
+--- !u!114 &2899309573434795279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1887,7 +1887,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7638136546163891867}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ef8deb55c39ea145a26a1b26700a3e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 82550988e5ac375459cc5c41674fdc85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   compareTag: Player
@@ -1895,6 +1895,10 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   graphicItem: {fileID: 7638136546163891867}
   particleSystem: {fileID: 0}
+  collider: {fileID: 6000726158786736245}
+  collect: 0
+  lerp: 5
+  minDistance: 1
 --- !u!1 &7749260495588266080
 GameObject:
   m_ObjectHideFlags: 0
