@@ -72,7 +72,9 @@ public class PlayerController : Singleton<PlayerController>
         _startPosition = transform.position;
         ResetSpeed();
         animatorManager.Play(AnimatorManager.AnimationType.RUN);
-
+        Vector3 targetScale = transform.localScale;
+        transform.localScale = Vector3.zero;
+        transform.DOScale(targetScale, 0.5f);
     }
 
     public void Bounce(){
